@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALALA — independent multi-genre music platform · Almaty</title>
+  <meta name="description" content="ALALA is an independent multi-genre music platform born in Almaty, Kazakhstan. Sets, podcasts and live sessions on SoundCloud, YouTube and Instagram.">
+  <meta name="theme-color" content="#1F2C34">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/banner-1280.jpg" media="(max-width: 1280px)">
+  <link rel="preload" as="image" href="assets/banner.jpg" media="(min-width: 1281px)">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/unbounded-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Motion is progressive: only opt in when the visitor hasn't asked for reduced motion.
+    document.documentElement.classList.add(
+      matchMedia("(prefers-reduced-motion: reduce)").matches ? "no-motion" : "motion");
+  </script>
+  <script src="main.js" defer></script>
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="videos.js" defer></script>
+  <script src="motion.js" defer></script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <symbol id="wordmark" viewBox="0 0 1462 328"><path fill="currentColor" fill-rule="evenodd" d="M214.2 0.2Q224.5 0 232 3Q239.5 6 246.2 12.8Q253 19.5 257 28Q261 36.5 281.5 144Q302 251.5 302.5 266Q303 280.5 301.5 288Q300 295.5 297.5 301Q295 306.5 288.8 313.2Q282.5 320 274 323.5Q265.5 327 253 327Q240.5 327 233 324.5Q225.5 322 218.8 316.2Q212 310.5 209.5 306.5Q207 302.5 205 295.5Q203 288.5 202.5 268.5Q202 248.5 199.2 244.2Q196.5 240 193 239Q189.5 238 184 240.5Q178.5 243 148 269.5Q117.5 296 101 307.5Q84.5 319 75.5 322.5Q66.5 326 60 327Q53.5 328 46.5 327.5Q39.5 327 32 324.5Q24.5 322 21.5 320Q18.5 318 12.8 311.8Q7 305.5 4.5 299.5Q2 293.5 1 288Q0 282.5 1 271.5Q2 260.5 5 255Q8 249.5 14.8 243.8Q21.5 238 28.5 235Q35.5 232 46.5 230Q57.5 228 122.5 226.5Q187.5 225 195.5 222.5Q203.5 220 208.2 215.2Q213 210.5 215 203.5Q217 196.5 226 122.5Q235 48.5 234.5 41.5Q234 34.5 232 30Q230 25.5 226.2 21.8Q222.5 18 219.5 17Q216.5 16 212.5 16Q208.5 16 204.5 17.5Q200.5 19 194.8 24.2Q189 29.5 184.5 36Q180 42.5 147.5 108.5Q115 174.5 109.2 181.2Q103.5 188 93 193.5Q82.5 199 75.5 200Q68.5 201 61 200Q53.5 199 47.5 196Q41.5 193 36.2 187.8Q31 182.5 27 173Q23 163.5 23 155.5Q23 147.5 24 144Q25 140.5 28.5 134Q32 127.5 40.8 118.2Q49.5 109 105 65Q160.5 21 172.5 13.5Q184.5 6 194.2 3.2Q204 0.5 214.2 0.2ZM425.8 0.8Q437.5 1 448 6.5Q458.5 12 464.2 19.8Q470 27.5 471.5 32.5Q473 37.5 473 46.5Q473 55.5 470.5 64.5Q468 73.5 462 85.5Q456 97.5 411 181Q366 264.5 364 271Q362 277.5 362 281Q362 284.5 363.5 288Q365 291.5 367.8 294.2Q370.5 297 374.5 298.5Q378.5 300 381.5 299.5Q384.5 299 396 292Q407.5 285 438 261.5Q468.5 238 478.5 233.5Q488.5 229 499.5 228.5Q510.5 228 519 231.5Q527.5 235 533.2 240.8Q539 246.5 541.5 251Q544 255.5 546 264.5Q548 273.5 546.5 282Q545 290.5 541 297Q537 303.5 530.2 308.8Q523.5 314 517 316.5Q510.5 319 505.5 320Q500.5 321 440.5 320.5Q380.5 320 371 316Q361.5 312 357.8 307.8Q354 303.5 351.5 297.5Q349 291.5 348 286Q347 280.5 347 264Q347 247.5 361 149Q375 50.5 378.5 39.5Q382 28.5 385.5 22.5Q389 16.5 395.2 10.8Q401.5 5 407.8 2.8Q414 0.5 425.8 0.8ZM793.2 0.2Q803.5 0 811 3Q818.5 6 825.2 12.8Q832 19.5 836 28Q840 36.5 860.5 144Q881 251.5 881.5 266Q882 280.5 880.5 288Q879 295.5 876.5 301Q874 306.5 867.8 313.2Q861.5 320 855 323Q848.5 326 839 327Q829.5 328 824.5 327.5Q819.5 327 812 324.5Q804.5 322 797.8 316.2Q791 310.5 788.5 306.5Q786 302.5 784 295.5Q782 288.5 781.5 268.5Q781 248.5 778.2 244.2Q775.5 240 772 239Q768.5 238 763 240.5Q757.5 243 727 269.5Q696.5 296 680 307.5Q663.5 319 654.5 322.5Q645.5 326 639 327Q632.5 328 625.5 327.5Q618.5 327 611 324.5Q603.5 322 600.5 320Q597.5 318 591.8 311.8Q586 305.5 583.5 299.5Q581 293.5 580 288Q579 282.5 580 271.5Q581 260.5 584 255Q587 249.5 593.8 243.8Q600.5 238 607.5 235Q614.5 232 625.5 230Q636.5 228 701.5 226.5Q766.5 225 774.5 222.5Q782.5 220 787.2 215.2Q792 210.5 794 203.5Q796 196.5 805 122.5Q814 48.5 812.5 38.5Q811 28.5 808.2 24.8Q805.5 21 800.5 18.5Q795.5 16 791.5 16Q787.5 16 783.5 17.5Q779.5 19 773.8 24.2Q768 29.5 763.5 36Q759 42.5 726.5 108.5Q694 174.5 688.2 181.2Q682.5 188 672 193.5Q661.5 199 654 200Q646.5 201 639.5 200Q632.5 199 626.5 196Q620.5 193 615.2 187.8Q610 182.5 606 173Q602 163.5 602 155.5Q602 147.5 603 144Q604 140.5 607.5 134Q611 127.5 619.2 118.8Q627.5 110 687 63Q746.5 16 755 11Q763.5 6 773.2 3.2Q783 0.5 793.2 0.2ZM1002.2 0.2Q1011.5 0 1015.5 1Q1019.5 2 1028.5 7Q1037.5 12 1043.2 19.8Q1049 27.5 1050.5 32.5Q1052 37.5 1052 46.5Q1052 55.5 1049.5 64.5Q1047 73.5 1041 85.5Q1035 97.5 990 181Q945 264.5 943.5 268.5Q942 272.5 941.5 278.5Q941 284.5 942.5 288Q944 291.5 946.8 294.2Q949.5 297 953.5 298.5Q957.5 300 960.5 299.5Q963.5 299 975 292Q986.5 285 1017 261.5Q1047.5 238 1054.5 234.5Q1061.5 231 1067 229.5Q1072.5 228 1081 228Q1089.5 228 1098 231.5Q1106.5 235 1112.2 240.8Q1118 246.5 1120.5 251Q1123 255.5 1125 264.5Q1127 273.5 1125.5 282Q1124 290.5 1120 297Q1116 303.5 1109.2 308.8Q1102.5 314 1096 316.5Q1089.5 319 1084.5 320Q1079.5 321 1019.5 320.5Q959.5 320 950 316Q940.5 312 936.8 307.8Q933 303.5 930.5 297.5Q928 291.5 927 286Q926 280.5 926 264Q926 247.5 940 149Q954 50.5 957.5 39.5Q961 28.5 964.5 22.5Q968 16.5 974.2 10.8Q980.5 5 986.8 2.8Q993 0.5 1002.2 0.2ZM1373.2 0.2Q1383.5 0 1391 3Q1398.5 6 1405.2 12.8Q1412 19.5 1416 28Q1420 36.5 1440.5 144Q1461 251.5 1461.5 266Q1462 280.5 1460.5 288Q1459 295.5 1456.5 301Q1454 306.5 1447.8 313.2Q1441.5 320 1435 323Q1428.5 326 1418.5 327Q1408.5 328 1404 327.5Q1399.5 327 1392 324.5Q1384.5 322 1377.8 316.2Q1371 310.5 1368.5 306.5Q1366 302.5 1364 295.5Q1362 288.5 1361.5 268.5Q1361 248.5 1358.2 244.2Q1355.5 240 1352 239Q1348.5 238 1343 240.5Q1337.5 243 1307 269.5Q1276.5 296 1260 307.5Q1243.5 319 1234.5 322.5Q1225.5 326 1219 327Q1212.5 328 1205.5 327.5Q1198.5 327 1191 324.5Q1183.5 322 1180.5 320Q1177.5 318 1171.8 311.8Q1166 305.5 1163.5 299.5Q1161 293.5 1160 288Q1159 282.5 1160 271.5Q1161 260.5 1164 255Q1167 249.5 1173.8 243.8Q1180.5 238 1187.5 235Q1194.5 232 1205.5 230Q1216.5 228 1281.5 226.5Q1346.5 225 1354.5 222.5Q1362.5 220 1367.2 215.2Q1372 210.5 1374 203.5Q1376 196.5 1385 122.5Q1394 48.5 1392.5 38.5Q1391 28.5 1388.2 24.8Q1385.5 21 1380.5 18.5Q1375.5 16 1371.5 16Q1367.5 16 1363.5 17.5Q1359.5 19 1353.8 24.2Q1348 29.5 1343.5 36Q1339 42.5 1306.5 108.5Q1274 174.5 1268.2 181.2Q1262.5 188 1252 193.5Q1241.5 199 1234 200Q1226.5 201 1219.5 200Q1212.5 199 1206.5 196Q1200.5 193 1195.2 187.8Q1190 182.5 1186 173Q1182 163.5 1182 155.5Q1182 147.5 1183 144Q1184 140.5 1187.5 134Q1191 127.5 1199.8 118.2Q1208.5 109 1264 65Q1319.5 21 1331.5 13.5Q1343.5 6 1353.2 3.2Q1363 0.5 1373.2 0.2Z"/></symbol>
+    <symbol id="letter-a" viewBox="-37 -25 377 377"><path fill="currentColor" d="M214.2 0.2Q224.5 0 232 3Q239.5 6 246.2 12.8Q253 19.5 257 28Q261 36.5 281.5 144Q302 251.5 302.5 266Q303 280.5 301.5 288Q300 295.5 297.5 301Q295 306.5 288.8 313.2Q282.5 320 274 323.5Q265.5 327 253 327Q240.5 327 233 324.5Q225.5 322 218.8 316.2Q212 310.5 209.5 306.5Q207 302.5 205 295.5Q203 288.5 202.5 268.5Q202 248.5 199.2 244.2Q196.5 240 193 239Q189.5 238 184 240.5Q178.5 243 148 269.5Q117.5 296 101 307.5Q84.5 319 75.5 322.5Q66.5 326 60 327Q53.5 328 46.5 327.5Q39.5 327 32 324.5Q24.5 322 21.5 320Q18.5 318 12.8 311.8Q7 305.5 4.5 299.5Q2 293.5 1 288Q0 282.5 1 271.5Q2 260.5 5 255Q8 249.5 14.8 243.8Q21.5 238 28.5 235Q35.5 232 46.5 230Q57.5 228 122.5 226.5Q187.5 225 195.5 222.5Q203.5 220 208.2 215.2Q213 210.5 215 203.5Q217 196.5 226 122.5Q235 48.5 234.5 41.5Q234 34.5 232 30Q230 25.5 226.2 21.8Q222.5 18 219.5 17Q216.5 16 212.5 16Q208.5 16 204.5 17.5Q200.5 19 194.8 24.2Q189 29.5 184.5 36Q180 42.5 147.5 108.5Q115 174.5 109.2 181.2Q103.5 188 93 193.5Q82.5 199 75.5 200Q68.5 201 61 200Q53.5 199 47.5 196Q41.5 193 36.2 187.8Q31 182.5 27 173Q23 163.5 23 155.5Q23 147.5 24 144Q25 140.5 28.5 134Q32 127.5 40.8 118.2Q49.5 109 105 65Q160.5 21 172.5 13.5Q184.5 6 194.2 3.2Q204 0.5 214.2 0.2Z"/></symbol>
+    <symbol id="i-soundcloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 8.4A5.2 5.2 0 0 1 19.2 11a3 3 0 0 1-.7 6H11z"/><path d="M8 17v-7.5M5 17v-5M2 17v-2.5"/></g></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.6v12.8a1 1 0 0 0 1.5.86l10.3-6.4a1 1 0 0 0 0-1.72L9.5 4.74A1 1 0 0 0 8 5.6Z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></symbol>
+  </svg>
+
+  <div class="grain" aria-hidden="true"></div>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ALALA">
+      <svg class="brand__mark" aria-hidden="true"><use href="#wordmark"/></svg>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#listen" data-i18n="nav.listen">Listen</a>
+      <a href="#watch" data-i18n="nav.watch">Watch</a>
+      <a href="#live" data-i18n="nav.live">Live</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:lang">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-lang="ru" aria-pressed="false" lang="ru">РУ</button>
+      <button type="button" data-lang="kk" aria-pressed="false" lang="kk">ҚАЗ</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__sky" aria-hidden="true"></div>
+      <svg class="hero__ridge hero__ridge--far" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="rg-far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#335A6E"/><stop offset=".75" stop-color="#1F2C34"/></linearGradient></defs><path fill="url(#rg-far)" d="M0 240L0 78.3C3.8 77.8 15.0 75.4 22.5 75.2C30.0 75.1 37.5 78.4 45.0 77.4C52.5 76.4 60.0 71.0 67.5 69.0C75.0 67.1 82.5 67.0 90.0 65.9C97.5 64.8 105.0 62.9 112.5 62.3C120.0 61.7 127.5 62.5 135.0 62.2C142.5 61.9 150.0 61.4 157.5 60.5C165.0 59.6 172.5 58.1 180.0 56.7C187.5 55.3 195.0 53.4 202.5 52.0C210.0 50.6 217.5 49.5 225.0 48.2C232.5 46.8 240.0 45.0 247.5 44.0C255.0 43.0 262.5 41.6 270.0 42.1C277.5 42.5 285.0 45.4 292.5 46.9C300.0 48.3 307.5 50.3 315.0 50.6C322.5 51.0 330.0 49.4 337.5 49.0C345.0 48.5 352.5 49.0 360.0 47.9C367.5 46.7 375.0 43.6 382.5 42.1C390.0 40.6 397.5 38.9 405.0 38.7C412.5 38.6 420.0 41.0 427.5 41.3C435.0 41.6 442.5 39.5 450.0 40.4C457.5 41.3 465.0 45.0 472.5 46.7C480.0 48.4 487.5 50.1 495.0 50.6C502.5 51.1 510.0 49.6 517.5 49.9C525.0 50.2 532.5 51.2 540.0 52.3C547.5 53.5 555.0 55.5 562.5 56.9C570.0 58.2 577.5 58.8 585.0 60.5C592.5 62.3 600.0 65.1 607.5 67.3C615.0 69.5 622.5 71.6 630.0 73.7C637.5 75.9 645.0 78.7 652.5 80.1C660.0 81.5 667.5 80.1 675.0 82.0C682.5 83.9 690.0 88.9 697.5 91.7C705.0 94.5 712.5 98.0 720.0 98.7C727.5 99.5 735.0 96.6 742.5 96.2C750.0 95.8 757.5 95.2 765.0 96.3C772.5 97.3 780.0 101.3 787.5 102.4C795.0 103.5 802.5 103.9 810.0 102.9C817.5 101.9 825.0 98.0 832.5 96.7C840.0 95.3 847.5 95.6 855.0 95.0C862.5 94.3 870.0 93.3 877.5 92.8C885.0 92.2 892.5 91.7 900.0 91.6C907.5 91.4 915.0 92.2 922.5 91.7C930.0 91.3 937.5 90.5 945.0 88.9C952.5 87.2 960.0 83.4 967.5 81.7C975.0 80.0 982.5 79.3 990.0 78.7C997.5 78.1 1005.0 78.2 1012.5 78.0C1020.0 77.8 1027.5 77.4 1035.0 77.4C1042.5 77.4 1050.0 76.8 1057.5 77.8C1065.0 78.9 1072.5 83.4 1080.0 83.7C1087.5 84.0 1095.0 81.2 1102.5 79.4C1110.0 77.7 1117.5 75.0 1125.0 73.1C1132.5 71.3 1140.0 70.6 1147.5 68.5C1155.0 66.4 1162.5 62.2 1170.0 60.7C1177.5 59.2 1185.0 60.0 1192.5 59.5C1200.0 58.9 1207.5 57.9 1215.0 57.4C1222.5 56.9 1230.0 57.4 1237.5 56.3C1245.0 55.2 1252.5 51.7 1260.0 50.8C1267.5 49.9 1275.0 50.6 1282.5 51.1C1290.0 51.5 1297.5 52.5 1305.0 53.5C1312.5 54.6 1320.0 56.6 1327.5 57.6C1335.0 58.6 1342.5 58.8 1350.0 59.3C1357.5 59.9 1365.0 60.5 1372.5 60.8C1380.0 61.1 1387.5 61.0 1395.0 61.2C1402.5 61.3 1410.0 61.9 1417.5 62.0C1425.0 62.1 1436.2 61.9 1440.0 61.8L1440 240Z"/></svg>
+      <svg class="hero__ridge hero__ridge--near" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240L0 131.6C3.8 131.5 15.0 131.2 22.5 130.9C30.0 130.5 37.5 129.6 45.0 129.7C52.5 129.9 60.0 130.9 67.5 131.8C75.0 132.7 82.5 133.8 90.0 135.2C97.5 136.6 105.0 138.4 112.5 140.1C120.0 141.7 127.5 144.3 135.0 145.1C142.5 145.9 150.0 144.4 157.5 144.7C165.0 145.1 172.5 147.1 180.0 147.0C187.5 146.9 195.0 144.3 202.5 143.9C210.0 143.5 217.5 144.7 225.0 144.6C232.5 144.4 240.0 144.0 247.5 143.0C255.0 141.9 262.5 138.8 270.0 138.3C277.5 137.9 285.0 139.3 292.5 140.4C300.0 141.5 307.5 143.7 315.0 144.7C322.5 145.6 330.0 146.0 337.5 146.0C345.0 146.1 352.5 145.0 360.0 145.0C367.5 145.0 375.0 145.2 382.5 145.9C390.0 146.6 397.5 148.1 405.0 149.2C412.5 150.3 420.0 152.0 427.5 152.4C435.0 152.7 442.5 151.3 450.0 151.6C457.5 151.8 465.0 153.7 472.5 154.0C480.0 154.2 487.5 152.3 495.0 153.1C502.5 153.9 510.0 157.1 517.5 158.7C525.0 160.2 532.5 161.4 540.0 162.1C547.5 162.8 555.0 162.9 562.5 162.7C570.0 162.5 577.5 161.1 585.0 161.1C592.5 161.0 600.0 162.0 607.5 162.3C615.0 162.6 622.5 162.6 630.0 162.8C637.5 163.0 645.0 163.4 652.5 163.3C660.0 163.1 667.5 162.4 675.0 161.8C682.5 161.2 690.0 159.9 697.5 159.8C705.0 159.6 712.5 161.4 720.0 160.9C727.5 160.3 735.0 158.0 742.5 156.6C750.0 155.2 757.5 153.1 765.0 152.5C772.5 151.8 780.0 153.1 787.5 152.7C795.0 152.4 802.5 150.5 810.0 150.3C817.5 150.1 825.0 150.7 832.5 151.5C840.0 152.3 847.5 154.5 855.0 155.3C862.5 156.0 870.0 156.3 877.5 155.9C885.0 155.5 892.5 153.3 900.0 153.0C907.5 152.7 915.0 154.3 922.5 154.2C930.0 154.0 937.5 152.4 945.0 152.1C952.5 151.8 960.0 152.1 967.5 152.3C975.0 152.5 982.5 153.8 990.0 153.2C997.5 152.7 1005.0 150.3 1012.5 149.1C1020.0 147.9 1027.5 146.7 1035.0 146.0C1042.5 145.4 1050.0 145.3 1057.5 145.0C1065.0 144.7 1072.5 144.4 1080.0 144.4C1087.5 144.4 1095.0 144.8 1102.5 145.2C1110.0 145.6 1117.5 146.5 1125.0 146.9C1132.5 147.3 1140.0 148.1 1147.5 147.7C1155.0 147.3 1162.5 144.9 1170.0 144.3C1177.5 143.8 1185.0 144.2 1192.5 144.4C1200.0 144.6 1207.5 145.0 1215.0 145.4C1222.5 145.9 1230.0 145.8 1237.5 147.0C1245.0 148.2 1252.5 151.7 1260.0 152.6C1267.5 153.5 1275.0 152.0 1282.5 152.5C1290.0 153.1 1297.5 155.5 1305.0 155.9C1312.5 156.3 1320.0 155.6 1327.5 155.1C1335.0 154.5 1342.5 152.2 1350.0 152.4C1357.5 152.6 1365.0 155.6 1372.5 156.3C1380.0 156.9 1387.5 155.7 1395.0 156.0C1402.5 156.4 1410.0 157.5 1417.5 158.2C1425.0 159.0 1436.2 160.1 1440.0 160.4L1440 240Z"/></svg>
+
+      <div class="hero__inner">
+        <p class="hero__kicker" data-hero><span class="dot" aria-hidden="true"></span>Hello World!</p>
+        <h1 id="hero-title" class="hero__title">
+          <svg class="hero__mark" viewBox="0 0 1462 328" role="img" aria-label="ALALA"><path class="hero__letter" d="M214.2 0.2Q224.5 0 232 3Q239.5 6 246.2 12.8Q253 19.5 257 28Q261 36.5 281.5 144Q302 251.5 302.5 266Q303 280.5 301.5 288Q300 295.5 297.5 301Q295 306.5 288.8 313.2Q282.5 320 274 323.5Q265.5 327 253 327Q240.5 327 233 324.5Q225.5 322 218.8 316.2Q212 310.5 209.5 306.5Q207 302.5 205 295.5Q203 288.5 202.5 268.5Q202 248.5 199.2 244.2Q196.5 240 193 239Q189.5 238 184 240.5Q178.5 243 148 269.5Q117.5 296 101 307.5Q84.5 319 75.5 322.5Q66.5 326 60 327Q53.5 328 46.5 327.5Q39.5 327 32 324.5Q24.5 322 21.5 320Q18.5 318 12.8 311.8Q7 305.5 4.5 299.5Q2 293.5 1 288Q0 282.5 1 271.5Q2 260.5 5 255Q8 249.5 14.8 243.8Q21.5 238 28.5 235Q35.5 232 46.5 230Q57.5 228 122.5 226.5Q187.5 225 195.5 222.5Q203.5 220 208.2 215.2Q213 210.5 215 203.5Q217 196.5 226 122.5Q235 48.5 234.5 41.5Q234 34.5 232 30Q230 25.5 226.2 21.8Q222.5 18 219.5 17Q216.5 16 212.5 16Q208.5 16 204.5 17.5Q200.5 19 194.8 24.2Q189 29.5 184.5 36Q180 42.5 147.5 108.5Q115 174.5 109.2 181.2Q103.5 188 93 193.5Q82.5 199 75.5 200Q68.5 201 61 200Q53.5 199 47.5 196Q41.5 193 36.2 187.8Q31 182.5 27 173Q23 163.5 23 155.5Q23 147.5 24 144Q25 140.5 28.5 134Q32 127.5 40.8 118.2Q49.5 109 105 65Q160.5 21 172.5 13.5Q184.5 6 194.2 3.2Q204 0.5 214.2 0.2Z"/><path class="hero__letter" d="M425.8 0.8Q437.5 1 448 6.5Q458.5 12 464.2 19.8Q470 27.5 471.5 32.5Q473 37.5 473 46.5Q473 55.5 470.5 64.5Q468 73.5 462 85.5Q456 97.5 411 181Q366 264.5 364 271Q362 277.5 362 281Q362 284.5 363.5 288Q365 291.5 367.8 294.2Q370.5 297 374.5 298.5Q378.5 300 381.5 299.5Q384.5 299 396 292Q407.5 285 438 261.5Q468.5 238 478.5 233.5Q488.5 229 499.5 228.5Q510.5 228 519 231.5Q527.5 235 533.2 240.8Q539 246.5 541.5 251Q544 255.5 546 264.5Q548 273.5 546.5 282Q545 290.5 541 297Q537 303.5 530.2 308.8Q523.5 314 517 316.5Q510.5 319 505.5 320Q500.5 321 440.5 320.5Q380.5 320 371 316Q361.5 312 357.8 307.8Q354 303.5 351.5 297.5Q349 291.5 348 286Q347 280.5 347 264Q347 247.5 361 149Q375 50.5 378.5 39.5Q382 28.5 385.5 22.5Q389 16.5 395.2 10.8Q401.5 5 407.8 2.8Q414 0.5 425.8 0.8Z"/><path class="hero__letter" d="M793.2 0.2Q803.5 0 811 3Q818.5 6 825.2 12.8Q832 19.5 836 28Q840 36.5 860.5 144Q881 251.5 881.5 266Q882 280.5 880.5 288Q879 295.5 876.5 301Q874 306.5 867.8 313.2Q861.5 320 855 323Q848.5 326 839 327Q829.5 328 824.5 327.5Q819.5 327 812 324.5Q804.5 322 797.8 316.2Q791 310.5 788.5 306.5Q786 302.5 784 295.5Q782 288.5 781.5 268.5Q781 248.5 778.2 244.2Q775.5 240 772 239Q768.5 238 763 240.5Q757.5 243 727 269.5Q696.5 296 680 307.5Q663.5 319 654.5 322.5Q645.5 326 639 327Q632.5 328 625.5 327.5Q618.5 327 611 324.5Q603.5 322 600.5 320Q597.5 318 591.8 311.8Q586 305.5 583.5 299.5Q581 293.5 580 288Q579 282.5 580 271.5Q581 260.5 584 255Q587 249.5 593.8 243.8Q600.5 238 607.5 235Q614.5 232 625.5 230Q636.5 228 701.5 226.5Q766.5 225 774.5 222.5Q782.5 220 787.2 215.2Q792 210.5 794 203.5Q796 196.5 805 122.5Q814 48.5 812.5 38.5Q811 28.5 808.2 24.8Q805.5 21 800.5 18.5Q795.5 16 791.5 16Q787.5 16 783.5 17.5Q779.5 19 773.8 24.2Q768 29.5 763.5 36Q759 42.5 726.5 108.5Q694 174.5 688.2 181.2Q682.5 188 672 193.5Q661.5 199 654 200Q646.5 201 639.5 200Q632.5 199 626.5 196Q620.5 193 615.2 187.8Q610 182.5 606 173Q602 163.5 602 155.5Q602 147.5 603 144Q604 140.5 607.5 134Q611 127.5 619.2 118.8Q627.5 110 687 63Q746.5 16 755 11Q763.5 6 773.2 3.2Q783 0.5 793.2 0.2Z"/><path class="hero__letter" d="M1002.2 0.2Q1011.5 0 1015.5 1Q1019.5 2 1028.5 7Q1037.5 12 1043.2 19.8Q1049 27.5 1050.5 32.5Q1052 37.5 1052 46.5Q1052 55.5 1049.5 64.5Q1047 73.5 1041 85.5Q1035 97.5 990 181Q945 264.5 943.5 268.5Q942 272.5 941.5 278.5Q941 284.5 942.5 288Q944 291.5 946.8 294.2Q949.5 297 953.5 298.5Q957.5 300 960.5 299.5Q963.5 299 975 292Q986.5 285 1017 261.5Q1047.5 238 1054.5 234.5Q1061.5 231 1067 229.5Q1072.5 228 1081 228Q1089.5 228 1098 231.5Q1106.5 235 1112.2 240.8Q1118 246.5 1120.5 251Q1123 255.5 1125 264.5Q1127 273.5 1125.5 282Q1124 290.5 1120 297Q1116 303.5 1109.2 308.8Q1102.5 314 1096 316.5Q1089.5 319 1084.5 320Q1079.5 321 1019.5 320.5Q959.5 320 950 316Q940.5 312 936.8 307.8Q933 303.5 930.5 297.5Q928 291.5 927 286Q926 280.5 926 264Q926 247.5 940 149Q954 50.5 957.5 39.5Q961 28.5 964.5 22.5Q968 16.5 974.2 10.8Q980.5 5 986.8 2.8Q993 0.5 1002.2 0.2Z"/><path class="hero__letter" d="M1373.2 0.2Q1383.5 0 1391 3Q1398.5 6 1405.2 12.8Q1412 19.5 1416 28Q1420 36.5 1440.5 144Q1461 251.5 1461.5 266Q1462 280.5 1460.5 288Q1459 295.5 1456.5 301Q1454 306.5 1447.8 313.2Q1441.5 320 1435 323Q1428.5 326 1418.5 327Q1408.5 328 1404 327.5Q1399.5 327 1392 324.5Q1384.5 322 1377.8 316.2Q1371 310.5 1368.5 306.5Q1366 302.5 1364 295.5Q1362 288.5 1361.5 268.5Q1361 248.5 1358.2 244.2Q1355.5 240 1352 239Q1348.5 238 1343 240.5Q1337.5 243 1307 269.5Q1276.5 296 1260 307.5Q1243.5 319 1234.5 322.5Q1225.5 326 1219 327Q1212.5 328 1205.5 327.5Q1198.5 327 1191 324.5Q1183.5 322 1180.5 320Q1177.5 318 1171.8 311.8Q1166 305.5 1163.5 299.5Q1161 293.5 1160 288Q1159 282.5 1160 271.5Q1161 260.5 1164 255Q1167 249.5 1173.8 243.8Q1180.5 238 1187.5 235Q1194.5 232 1205.5 230Q1216.5 228 1281.5 226.5Q1346.5 225 1354.5 222.5Q1362.5 220 1367.2 215.2Q1372 210.5 1374 203.5Q1376 196.5 1385 122.5Q1394 48.5 1392.5 38.5Q1391 28.5 1388.2 24.8Q1385.5 21 1380.5 18.5Q1375.5 16 1371.5 16Q1367.5 16 1363.5 17.5Q1359.5 19 1353.8 24.2Q1348 29.5 1343.5 36Q1339 42.5 1306.5 108.5Q1274 174.5 1268.2 181.2Q1262.5 188 1252 193.5Q1241.5 199 1234 200Q1226.5 201 1219.5 200Q1212.5 199 1206.5 196Q1200.5 193 1195.2 187.8Q1190 182.5 1186 173Q1182 163.5 1182 155.5Q1182 147.5 1183 144Q1184 140.5 1187.5 134Q1191 127.5 1199.8 118.2Q1208.5 109 1264 65Q1319.5 21 1331.5 13.5Q1343.5 6 1353.2 3.2Q1363 0.5 1373.2 0.2Z"/></svg>
+        </h1>
+        <p class="hero__tagline" data-hero data-i18n="tagline">Independent multi-genre music platform · Almaty</p>
+        <ul class="platforms" role="list" data-hero>
+          <li><a class="btn" href="https://soundcloud.com/alalalasound" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-soundcloud"/></svg>SoundCloud</a></li>
+          <li><a class="btn" href="https://www.youtube.com/@alalasound" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</a></li>
+          <li><a class="btn" href="https://www.instagram.com/alalasound/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a></li>
+        </ul>
+      </div>
+
+      <a class="hero__cue" href="#listen" data-hero><span data-i18n="cue">Tune in</span><span class="hero__cue-line" aria-hidden="true"></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>ALALA PODCAST</span><svg><use href="#i-spark"/></svg>
+          <span>ON AIR</span><svg><use href="#i-spark"/></svg>
+          <span>VINYL SETS</span><svg><use href="#i-spark"/></svg>
+          <span>ALMATY</span><svg><use href="#i-spark"/></svg>
+          <span>MULTI-GENRE</span><svg><use href="#i-spark"/></svg>
+          <span>WILD DANCES</span><svg><use href="#i-spark"/></svg>
+          <span>АЛМАТЫ</span><svg><use href="#i-spark"/></svg>
+          <span>TUNE IN AND ENJOY</span><svg><use href="#i-spark"/></svg>
+        </div>
+        <div class="marquee__group">
+          <span>ALALA PODCAST</span><svg><use href="#i-spark"/></svg>
+          <span>ON AIR</span><svg><use href="#i-spark"/></svg>
+          <span>VINYL SETS</span><svg><use href="#i-spark"/></svg>
+          <span>ALMATY</span><svg><use href="#i-spark"/></svg>
+          <span>MULTI-GENRE</span><svg><use href="#i-spark"/></svg>
+          <span>WILD DANCES</span><svg><use href="#i-spark"/></svg>
+          <span>АЛМАТЫ</span><svg><use href="#i-spark"/></svg>
+          <span>TUNE IN AND ENJOY</span><svg><use href="#i-spark"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 01 LISTEN ============ -->
+    <section class="chapter" id="listen" aria-labelledby="listen-title">
+      <header class="chapter__head">
+        <span class="chapter__num" aria-hidden="true">01</span>
+        <h2 id="listen-title" class="chapter__title"><span class="mask"><span data-i18n="listen.title">Listen</span></span></h2>
+        <p class="lead" data-reveal data-i18n="listen.lead">Sets, podcasts and tracks from Almaty and beyond.</p>
+      </header>
+      <div class="listen__stage">
+        <div class="vinyl" aria-hidden="true">
+          <div class="vinyl__disc">
+            <div class="vinyl__label"><svg><use href="#letter-a"/></svg></div>
+          </div>
+        </div>
+        <div class="embed embed--soundcloud" data-reveal>
+          <iframe
+            title="ALALA on SoundCloud" data-i18n-attr="title:listen.frame"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/951407119&amp;color=%232b438c&amp;auto_play=false&amp;visual=true&amp;show_artwork=true&amp;show_comments=false"
+            loading="lazy" allow="autoplay" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+      <p class="more" data-reveal><a class="link-arrow" href="https://soundcloud.com/alalalasound" target="_blank" rel="noopener noreferrer"><span data-i18n="listen.more">More on SoundCloud</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+    </section>
+
+    <!-- ============ 02 WATCH ============ -->
+    <section class="chapter chapter--alt" id="watch" aria-labelledby="watch-title">
+      <header class="chapter__head">
+        <span class="chapter__num" aria-hidden="true">02</span>
+        <h2 id="watch-title" class="chapter__title"><span class="mask"><span data-i18n="watch.title">Watch</span></span></h2>
+        <p class="lead" data-reveal>
+          <span class="onair"><span class="onair__dot" aria-hidden="true"></span>ON AIR</span>
+          <span data-i18n="watch.lead">ALALA PODCAST, live sessions and ALALA ON AIR.</span>
+        </p>
+      </header>
+      <!-- Carousel of the newest uploads, built by videos.js from /api/videos.json.
+           If that list can't be loaded, the playlist player below takes its place. -->
+      <div class="reel" data-reel hidden>
+        <div class="reel__track" data-reel-track role="list" tabindex="0"
+             aria-label="Latest ALALA videos" data-i18n-attr="aria-label:watch.carousel"></div>
+        <div class="reel__bar">
+          <span class="reel__count" data-reel-count aria-hidden="true"></span>
+          <span class="reel__progress" aria-hidden="true"><span data-reel-progress></span></span>
+          <div class="reel__nav">
+            <button class="reel__btn reel__btn--prev" type="button" data-reel-prev aria-label="Previous videos" data-i18n-attr="aria-label:watch.prev"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+            <button class="reel__btn" type="button" data-reel-next aria-label="Next videos" data-i18n-attr="aria-label:watch.next"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <template id="reel-fallback">
+        <div class="screen">
+          <div class="embed embed--video">
+            <iframe
+              title="Latest ALALA videos on YouTube" data-i18n-attr="title:watch.frame"
+              src="https://www.youtube-nocookie.com/embed/videoseries?list=UUxpVTc8xnPcyENZ7KaYG4GQ"
+              loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </template>
+      <noscript>
+        <div class="screen">
+          <div class="embed embed--video">
+            <iframe
+              title="Latest ALALA videos on YouTube" data-i18n-attr="title:watch.frame"
+              src="https://www.youtube-nocookie.com/embed/videoseries?list=UUxpVTc8xnPcyENZ7KaYG4GQ"
+              loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </noscript>
+      <p class="more" data-reveal><a class="link-arrow" href="https://www.youtube.com/@alalasound" target="_blank" rel="noopener noreferrer"><span data-i18n="watch.more">More on YouTube</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+    </section>
+
+    <!-- ============ 03 LIVE ============ -->
+    <section class="chapter" id="live" aria-labelledby="live-title">
+      <header class="chapter__head">
+        <span class="chapter__num" aria-hidden="true">03</span>
+        <h2 id="live-title" class="chapter__title"><span class="mask"><span data-i18n="live.title">Live</span></span></h2>
+        <p class="lead" data-reveal data-i18n="live.lead">Vinyl sets and nights around the city.</p>
+      </header>
+
+      <!--
+        Live photos: files in assets/live/, ≤1600px long side.
+        The first <figure> is the large lead image. Add alt/caption keys to all
+        three dictionaries in main.js. Example:
+
+        <figure>
+          <img src="assets/live/komok-bar.jpg" alt="Vinyl set at Komok Bar"
+               data-i18n-attr="alt:live.p1.alt" loading="lazy" width="1600" height="1067">
+          <figcaption data-i18n="live.p1.cap">Komok Bar · vinyl set</figcaption>
+        </figure>
+
+        While no <figure> is present, the grid is hidden and the card below is shown.
+      -->
+      <div class="live-grid">
+      </div>
+
+      <a class="live-card" href="https://www.instagram.com/alalasound/" target="_blank" rel="noopener noreferrer" data-reveal>
+        <span class="live-card__bg" aria-hidden="true"></span>
+        <span class="live-card__body">
+          <span class="live-card__ig"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</span>
+          <strong class="live-card__handle">@alalasound</strong>
+          <span class="live-card__text" data-i18n="live.card">Live sets, vinyl nights and community events — follow along on Instagram.</span>
+        </span>
+        <span class="live-card__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <p class="more more--live" data-reveal><a class="link-arrow" href="https://www.instagram.com/alalasound/" target="_blank" rel="noopener noreferrer"><span data-i18n="live.more">Follow @alalasound on Instagram</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+    </section>
+
+    <!-- ============ 04 ABOUT ============ -->
+    <section class="chapter about" id="about" aria-labelledby="about-title">
+      <header class="chapter__head">
+        <span class="chapter__num" aria-hidden="true">04</span>
+        <h2 id="about-title" class="chapter__title"><span class="mask"><span data-i18n="about.title">About</span></span></h2>
+      </header>
+      <div class="manifesto">
+        <p class="manifesto__hello" data-i18n="about.p1">Hello World! We are ALALA!</p>
+        <p class="manifesto__text" data-split data-i18n="about.p2">ALALA is an independent multi-genre music platform that was born in Almaty, Kazakhstan.</p>
+        <p class="manifesto__text" data-split data-i18n="about.p3">ALALA is a small group of enthusiasts that strive to share and collect some good music, appreciate wild dances, and believe in the unity of like-minded people.</p>
+        <p class="manifesto__text" data-split data-i18n="about.p4">We are hoping to spread joyful vibes for every listener that is tuning to our platform.</p>
+        <p class="manifesto__sign" data-reveal><span data-i18n="about.p5">Tune in and Enjoy!</span> <span class="manifesto__by" data-i18n="about.sign">Best, ALALA</span></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__contact" data-reveal>
+        <p class="site-footer__label" data-i18n="footer.contact">Get in touch</p>
+        <a class="site-footer__mail" href="mailto:alalalasound@gmail.com">alalalasound@gmail.com</a>
+      </div>
+      <ul class="icons" role="list" data-reveal>
+        <li><a href="https://soundcloud.com/alalalasound" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud"><svg aria-hidden="true"><use href="#i-soundcloud"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@alalasound" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+        <li><a href="https://www.instagram.com/alalasound/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="mailto:alalalasound@gmail.com" aria-label="E-mail"><svg aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+      </ul>
+    </div>
+    <svg class="site-footer__mark" aria-hidden="true"><use href="#wordmark"/></svg>
+    <p class="site-footer__copy" data-i18n="footer.copy">© ALALA · Almaty, Kazakhstan</p>
+  </footer>
+</body>
+</html>

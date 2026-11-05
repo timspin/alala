@@ -1,0 +1,4 @@
+# static export (built by `go run . -export dist` and by CI)
+/dist/
+.DS_Store
+.claude/settings.local.json
